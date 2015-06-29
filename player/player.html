@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="player.css" />
+
+		<script>
+			var MyPackage = {};
+			MyPackage.classes = {};
+		</script>
+	  
+		<!--Dash.js-->
+		<script src="../dash.js/dash.all.js"></script>
+			
+		<!-- Ajouts et modifs du player Dash.js-->
+		<script src="../dash.js-adds/MyDownloadRatioRule.js"></script>
+		<script src="../dash.js-adds/SpatialPositionRule.js"></script>
+		<script src="../dash.js-adds/Position.js"></script>
+		<script src="../dash.js-adds/MyBaseRulesCollection.js"></script>
+		<script src="../dash.js-adds/MyAbrController.js"></script>
+		<script src="../dash.js-adds/MyMetricsList.js"></script>
+		<script src="../dash.js-adds/MyMetricsModel.js"></script>
+		<script src="../dash.js-adds/MyContext.js"></script>
+		
+		<!-- Objet Player et Tiles Controller -->
+		<script src="../dash.js-adds/TilesController.js"></script>
+		<script src="../dash.js-adds/MyPackagePlayer.js"></script>
+		
+		<!--jQuery UI -->
+		<script src="jquery-1.10.2.js"></script>
+		<script src="jquery-ui-1.10.4.min.js"></script>
+				
+		<!-- Modules setup et affichage des tuiles -->
+		<script src="commands.js"></script>
+		<script src="quality.js"></script>
+		<script src="setup.js"></script>
+	</head>
+
+	<body onload="setup('tiled_videos', 'thumbnail_video', 'info');">
+
+		<div>
+			<legend>Select URL:</legend>
+			<select onchange="openTiles(this.value);" onfocus="this.selectedIndex = -1;">
+				<option value="./myanmar_tiles.json">Myanmar</option>
+				<option value="http://download.tsi.telecom-paristech.fr/gpac/DASH_CONFORMANCE/TelecomParisTech/SRD/mp4-onDemand/counter-tiles-2x2.json">Counter</option>
+			</select>
+			<button onclick="play_pause(descriptionTuiles);">Play/Pause</button>
+			<button onclick="clip_unclip(descriptionTuiles, 'tiled_videos');">Clip/Unclip</button>
+			<!--br>
+			Top :<input type='range' id="top" onchange="updateTopLeft();">
+			Left : <input type='range' id="left" onchange="updateTopLeft();"--> 
+		</div>
+
+		<div id='info'></div>
+		<table>
+		<thead>
+		<tr>
+		<td>Thumbnail video</td>
+		<td>Tiled videos</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>
+		<div id='thumbnail_video'></div>
+		</td>
+		<td>
+		<div id='tiled_videos'></div>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+	</body>
+</html>

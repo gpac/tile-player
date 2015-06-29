@@ -1,0 +1,12 @@
+{
+	"width": 1280,
+	"height": 720,
+	"baseUrl": "http://127.0.0.1:8080/4k-roudier/media/dashed_videos/",
+	"src": "miniature_dash/miniature_dash.mpd",
+    "tiles": [
+		{"src": "t1_gopfix/myanmar_1080_t1_gopfix_dash.mpd", "width": 640, "height": 360, "x": 0, "y": 0},
+		{"src": "t2_gopfix/myanmar_1080_t2_gopfix_dash.mpd", "width": 640, "height": 360, "x": 640, "y": 0},
+		{"src": "t3_gopfix/myanmar_1080_t3_gopfix_dash.mpd", "width": 640, "height": 360, "x": 0, "y": 360},
+		{"src": "t4_gopfix/myanmar_1080_t4_gopfix_dash.mpd", "width": 640, "height": 360, "x": 640, "y": 360}
+    ]
+}
