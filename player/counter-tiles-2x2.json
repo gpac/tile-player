@@ -1,0 +1,12 @@
+{
+	"width": 1280,
+	"height": 720,
+	"baseUrl": "http://download.tsi.telecom-paristech.fr/gpac/DASH_CONFORMANCE/TelecomParisTech/SRD/mp4-onDemand/",
+	"src": "counter-tiles-2x2-main.mpd",
+    "tiles": [
+		{"src": "counter-tiles-2x2-tile1.mpd", "width": 640, "height": 360, "x": 0, "y": 0},
+		{"src": "counter-tiles-2x2-tile2.mpd", "width": 640, "height": 360, "x": 640, "y": 0},
+		{"src": "counter-tiles-2x2-tile3.mpd", "width": 640, "height": 360, "x": 640, "y": 360},
+		{"src": "counter-tiles-2x2-tile4.mpd", "width": 640, "height": 360, "x": 0, "y": 360}
+    ]
+}
